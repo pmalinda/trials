@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="febby.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a href="#product-management">Product Management</a>
+            <a href="#user-management">User Management</a>
+            <a href="#order-management">Order Management</a>
+        </nav>
+
+        <!-- Product Management Section -->
+        <section id="product-management">
+            <h2>Product Management</h2>
+            <div class="form-group">
+                <input type="text" id="product-name" placeholder="Product Name">
+                <input type="text" id="product-description" placeholder="Description">
+                <input type="number" id="product-price" placeholder="Price">
+                <input type="text" id="product-image" placeholder="Image URL">
+                <button onclick="addProduct()">Add Product</button>
+            </div>
+            <div id="product-list" class="list-section"></div>
+        </section>
+
+        <!-- User Management Section -->
+        <section id="user-management">
+            <h2>User Management</h2>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Username">
+                <input type="email" id="user-email" placeholder="Email">
+                <button onclick="addUser()">Add User</button>
+            </div>
+            <div id="user-list" class="list-section"></div>
+        </section>
+
+        <!-- Order Management Section -->
+        <section id="order-management">
+            <h2>Order Management</h2>
+            <div class="form-group">
+                <input type="text" id="order-id" placeholder="Order ID">
+                <input type="text" id="order-customer" placeholder="Customer Name">
+                <input type="text" id="order-products" placeholder="Products">
+                <select id="order-status">
+                    <option value="Pending">Pending</option>
+                    <option value="Processed">Processed</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <button onclick="addOrder()">Add Order</button>
+            </div>
+            <div id="order-list" class="list-section"></div>
+        </section>
+    </div>
+    <script src="febby.js"></script>
+</body>
+</html>
